@@ -208,8 +208,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ showContactForm }) => {
           <div>
             <h4 className="font-medium text-white mb-2">Phone</h4>
             <div className="flex flex-col space-y-1">
-              <a href="tel:+447391484807" className="text-white/80 hover:text-white transition-colors">07391 484807</a>
-              <a href="tel:+447770365242" className="text-white/80 hover:text-white transition-colors">07770 365242</a>
+              <a href="tel:+447391484807" className="text-white/80 hover:text-white transition-colors">07391484807</a>
+              <a href="tel:+447770365242" className="text-white/80 hover:text-white transition-colors">07770365242</a>
             </div>
           </div>
         </div>

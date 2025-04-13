@@ -85,9 +85,9 @@ const Footer: React.FC = () => {
               <li className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-white/80 mt-0.5 flex-shrink-0" />
                 <div className="text-[16px] text-white/80">
-                  <a href="tel:+447391484807" className="hover:text-white transition-colors">07391 484807</a>
+                  <a href="tel:+447391484807" className="hover:text-white transition-colors">07391484807</a>
                   <br />
-                  <a href="tel:+447770365242" className="hover:text-white transition-colors">07770 365242</a>
+                  <a href="tel:+447770365242" className="hover:text-white transition-colors">07770365242</a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
