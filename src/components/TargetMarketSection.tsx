@@ -10,7 +10,7 @@ const markets = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1969"
+    image: "/01.png"
   },
   {
     title: "Residential Housing",
@@ -20,7 +20,7 @@ const markets = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    image: "https://images.unsplash.com/photo-1512821231209-3cd3e4df62f8"
+    image: "/02.png"
   },
   {
     title: "Public Sector Buildings",
@@ -30,7 +30,7 @@ const markets = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
       </svg>
     ),
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1976"
+    image: "/03.png"
   },
   {
     title: "Property Management Companies",
@@ -40,7 +40,7 @@ const markets = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973"
+    image: "/04.png"
   }
 ];
 

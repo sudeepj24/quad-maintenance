@@ -12,13 +12,14 @@ import Footer from '@/components/Footer';
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showContactForm, setShowContactForm] = useState(false);
+  const [highlightedService, setHighlightedService] = useState<string>();
 
   useEffect(() => {
     // Update page title and meta description for SEO
     document.title = "Quad Maintenance";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Providing expert maintenance, repair, and facility management services with over 20 years of experience for residential, commercial, and industrial properties.");
+      metaDescription.setAttribute("content", "Providing expert maintenance services with over 20 years of experience for residential, commercial, and industrial properties.");
     }
   }, []);
 
@@ -45,14 +46,18 @@ const Index = () => {
         )}
         {activeSection === 'services' && (
           <div className="pt-[75px] bg-[#E3F2FD]">
-            <ServicesSection />
+            <ServicesSection highlightedService={highlightedService} />
           </div>
         )}
         {activeSection === 'contact' && (
           <ContactSection showContactForm={showContactForm} />
         )}
       </main>
-      <Footer />
+      <Footer 
+        setActiveSection={setActiveSection} 
+        setShowContactForm={setShowContactForm} 
+        setHighlightedService={setHighlightedService}
+      />
     </div>
   );
 };

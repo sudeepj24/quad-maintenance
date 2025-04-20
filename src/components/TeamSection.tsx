@@ -37,7 +37,7 @@ const TeamSection: React.FC = () => {
             <div className="bg-gradient-to-r from-[#1a5ff2] to-[#4e92f9] backdrop-blur-md rounded-lg p-8 shadow-lg border border-blue-500/30 h-full">
               <div className="w-20 h-1 bg-yellow-400 mx-auto mb-6"></div>
               <p className="text-lg mb-6 text-white/90">
-                At Quad Maintenance Ltd, our team consists of highly qualified engineers, technicians, and support staff with extensive experience in all aspects of property maintenance and facility management.
+                At Quad Maintenance Ltd, our team consists of highly qualified engineers, technicians, and support staff with extensive experience in all aspects of property maintenance.
               </p>
               <p className="text-lg mb-6 text-white/90">
                 Our professionals are certified in their respective fields and regularly undergo training to stay updated with the latest industry standards and technologies.

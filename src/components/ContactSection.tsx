@@ -195,8 +195,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ showContactForm }) => {
           </div>
           <div>
             <h4 className="font-medium text-white mb-2">Email</h4>
-            <a href="mailto:sales@quadmaintenance.com" className="text-white/80 hover:text-white transition-colors">
-              sales@quadmaintenance.com
+            <a href="mailto:admin@quadmaintenance.com" className="text-white/80 hover:text-white transition-colors">
+              admin@quadmaintenance.com
             </a>
           </div>
         </div>
@@ -248,7 +248,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ showContactForm }) => {
   );
 
   return (
-    <section id="contact" className="pt-[105px] pb-[25px] bg-[#e6f0ff]">
+    <section id="contact" className="pt-[105px] pb-[25px] bg-[#e6f0ff] mt-[30px] mt-[30px] md:mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="section-title">
           <AnimatedSection>

@@ -25,7 +25,7 @@ const AboutSection: React.FC = () => {
             </span>
             <h2 className="section-heading text-[#1a3e72]">Who We Are</h2>
             <p className="section-subheading text-[#334E68]">
-            We are a team of experts with over 20 years of combined experience in property maintenance and facility management
+            We are a team of experts with over 20 years of combined experience in property maintenance
             </p>
           </AnimatedSection>
         </div>

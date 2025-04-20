@@ -85,7 +85,7 @@ const WhyChooseUs: React.FC = () => {
   const [swiper, setSwiper] = useState<any>(null);
 
   return (
-    <section id="why-choose-us" className="pt-[30px] md:pt-[45px] pb-[60px] md:pb-[90px] bg-[#e6f0ff] overflow-hidden">
+    <section id="why-choose-us" className="pt-[30px] md:pt-[45px] pb-[60px] md:pb-[90px] bg-[#e6f0ff] overflow-hidden  mt-[45px] md:mt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="section-title">
           <AnimatedSection>

@@ -1,7 +1,13 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  setActiveSection?: (section: string) => void;
+  setShowContactForm?: (show: boolean) => void;
+  setHighlightedService?: (service: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ setActiveSection, setShowContactForm, setHighlightedService }) => {
   const currentYear = new Date().getFullYear();
   
   return (
@@ -15,7 +21,7 @@ const Footer: React.FC = () => {
             </div>
             <h3 className="text-lg font-semibold text-white mb-4">Quad Maintenance Ltd</h3>
             <p className="text-[16px] text-white/80 leading-relaxed">
-              Providing expert maintenance, repair, and facility management services with over 20 years of experience.
+              Providing expert maintenance services.
             </p>
             <p className="text-[16px] text-white/80 mt-6">
               Company Registration Number: 16273299 (Registered in England & Wales)
@@ -27,19 +33,89 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-[16px] text-white/80 hover:text-white transition-colors">Home</a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection) {
+                      setActiveSection('home');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#about" className="text-[16px] text-white/80 hover:text-white transition-colors">About Us</a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection) {
+                      setActiveSection('services');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
+                  Services
+                </a>
               </li>
               <li>
-                <a href="#services" className="text-[16px] text-white/80 hover:text-white transition-colors">Services</a>
+                <a
+                  href="#"
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
+                  Portfolio
+                </a>
               </li>
               <li>
-                <a href="#why-choose-us" className="text-[16px] text-white/80 hover:text-white transition-colors">Why Choose Us</a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection) {
+                      setActiveSection('about');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
+                  About
+                </a>
               </li>
               <li>
-                <a href="#contact" className="text-[16px] text-white/80 hover:text-white transition-colors">Contact</a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setShowContactForm) {
+                      setActiveSection('contact');
+                      setShowContactForm(true);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
+                  Get a Free Quote
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setShowContactForm) {
+                      setActiveSection('contact');
+                      setShowContactForm(false);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
@@ -49,31 +125,130 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Plumbing</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Plumbing');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Plumbing</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Electrics</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Electrics');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Electrics</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Carpentry</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Carpentry');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Carpentry</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Painting & Decorating</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Painting & Decorating');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Painting & Decorating</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Damp and Leaks</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Damp and Leaks');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Damp and Leaks</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Flooring and Roofing</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Flooring and Roofing');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Flooring and Roofing</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Drainage Services</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Drainage Services');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Drainage Services</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Handyman</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Handyman');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Handyman</a>
               </li>
               <li>
-                <a href="#" className="text-[16px] text-white/80 hover:text-white transition-colors">Property Management</a>
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (setActiveSection && setHighlightedService) {
+                      setActiveSection('services');
+                      setHighlightedService('Property Management');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                  className="text-[16px] text-white/80 hover:text-white transition-colors cursor-pointer"
+                >Property Management</a>
               </li>
             </ul>
           </div>
@@ -92,7 +267,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-white/80 mt-0.5 flex-shrink-0" />
-                <a href="mailto:sales@quadmaintenance.com" className="text-[16px] text-white/80 hover:text-white transition-colors">sales@quadmaintenance.com</a>
+                <a href="mailto:admin@quadmaintenance.com" className="text-[16px] text-white/80 hover:text-white transition-colors">admin@quadmaintenance.com</a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-white/80 mt-0.5 flex-shrink-0" />

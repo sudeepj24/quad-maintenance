@@ -46,7 +46,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setActiveSection, setShowCont
       <div className="container mx-auto px-6 sm:px-8 lg:px-10 relative z-10 text-center">
         <AnimatedSection animation="fade-in" className="max-w-4xl mx-auto">
           <span className="inline-block bg-[#1a5ff2] text-white px-5 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-md shadow-md hover:bg-[#4e92f9] transition-all duration-300 cursor-pointer">
-            Excellence in Maintenance, Trusted Reliability
+            Excellence  |  Reliability  |  Trust
           </span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-yellow-400 leading-tight mb-4 drop-shadow-lg">
             Quad Maintenance
@@ -68,10 +68,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setActiveSection, setShowCont
             <Button
               variant="outline"
               size="lg"
-              onClick={scrollToServices}
+              onClick={scrollToContact}
               className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#1a5ff2] font-bold py-3 px-6 rounded-lg sm:min-w-[180px] transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              Our Services
+              Contact Us
             </Button>
           </div>
         </AnimatedSection>
