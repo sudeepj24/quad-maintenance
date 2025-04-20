@@ -9,16 +9,10 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ setActiveSection, setShowContactForm }) => {
   const scrollToContact = () => {
-    if (setActiveSection && setShowContactForm) {
+    if (setActiveSection) {
       setActiveSection('contact');
-      setShowContactForm(true);
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const scrollToServices = () => {
