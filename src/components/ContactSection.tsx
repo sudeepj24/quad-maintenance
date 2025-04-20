@@ -285,7 +285,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ showContactForm }) => {
             <AnimatedSection animation="fade-in">
               <div className="bg-white rounded-lg overflow-hidden shadow-sm">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.4967067971377!2d0.1223155!3d51.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMwJzI2LjYiTiAwwrAwNycyMC4zIkU!5e0!3m2!1sen!2suk!4v1645705422384!5m2!1sen!2suk"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.8112631246164!2d0.1226213765782749!3d51.5384493146296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a65018633e3b%3A0x39d4c7c2c96b63d8!2sGrove%20Rd%2C%20Romford%20RM6%204XB%2C%20UK!5e0!3m2!1sen!2sus!4v1675350548049!5m2!1sen!2sus"
                   width="100%"
                   height="450"
                   style={{ border: 0 }}
