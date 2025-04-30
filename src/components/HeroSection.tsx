@@ -8,9 +8,12 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ setActiveSection, setShowContactForm }) => {
-  const scrollToContact = () => {
+  const scrollToContact = (showForm: boolean) => {
     if (setActiveSection) {
       setActiveSection('contact');
+    }
+    if (setShowContactForm) {
+      setShowContactForm(showForm);
     }
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
@@ -54,7 +57,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setActiveSection, setShowCont
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               size="lg"
-              onClick={scrollToContact}
+              onClick={() => scrollToContact(true)}
               className="sm:min-w-[180px] transform transition-all duration-300 hover:scale-105 hover:shadow-lg bg-[#1a5ff2] text-white hover:bg-[#4e92f9] font-bold py-3 px-6 rounded-lg"
             >
               Get a Free Quote
@@ -62,7 +65,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ setActiveSection, setShowCont
             <Button
               variant="outline"
               size="lg"
-              onClick={scrollToContact}
+              onClick={() => scrollToContact(false)}
               className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-[#1a5ff2] font-bold py-3 px-6 rounded-lg sm:min-w-[180px] transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Contact Us
